@@ -1,0 +1,35 @@
+{
+  "name": "apollo-link-response-queue",
+  "version": "0.0.1",
+  "description": "A link to queue responses and return resolved data when complete",
+  "repository": "https://github.com/orrybaram/apollo-link-response-queue",
+  "author": "orrybaram <orrybaram@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "lint": "tslint -c tslint.json src/*.ts* src/**/*.ts*",
+    "test": "yarn run lint && react-scripts-ts test --coverage --collectCoverageFrom=src/**/*.ts* --collectCoverageFrom=!src/index.ts --collectCoverageFrom=!src/TestUtils.ts",
+    "testonly": "react-scripts-ts test --env=jsdom",
+    "coverage": "codecov -f coverage/*.json"
+  },
+  "main": "build/dist/index.js",
+  "module": "build/dist/index.js",
+  "jsnext:main": "build/dist/index.js",
+  "typings": "build/dist/index.d.ts",
+  "dependencies": {
+    "@types/graphql": "^14.0.4",
+    "@types/jest": "^23.3.12",
+    "@types/node": "^10.12.18",
+    "apollo-link": "^1.2.6",
+    "codecov": "^3.1.0",
+    "graphql": "^14.0.2",
+    "graphql-tag": "^2.10.0",
+    "jest": "^23.6.0",
+    "nyc": "^13.1.0",
+    "react-scripts-ts": "^3.1.0",
+    "ts-jest": "^23.10.5",
+    "tslint": "^5.12.1",
+    "typescript": "^3.2.2",
+    "zen-observable-ts": "^0.8.13"
+  }
+}
