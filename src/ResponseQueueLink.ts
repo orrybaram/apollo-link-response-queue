@@ -3,9 +3,9 @@ import {
   Observable,
   Operation,
   FetchResult,
-  NextLink
-} from "apollo-link";
-import { Observer } from "zen-observable-ts";
+  NextLink,
+} from 'apollo-link';
+import { Observer } from 'zen-observable-ts';
 
 interface OperationQueueEntry {
   operation: Operation;
@@ -19,7 +19,7 @@ export default class QueueLink extends ApolloLink {
 
   public request(operation: Operation, forward: NextLink) {
     if (operation.getContext().queueResponse) {
-      return new Observable(observer => {
+      return new Observable((observer) => {
         const operationEntry = { operation, forward, observer };
         this.enqueue(operationEntry);
         return () => this.cancelOperation(operationEntry);
