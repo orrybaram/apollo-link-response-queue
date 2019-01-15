@@ -6,7 +6,7 @@
   "author": "orrybaram <orrybaram@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "tsc",
+    "build": "tsc -b",
     "lint": "tslint -c tslint.json src/*.ts* src/**/*.ts*",
     "test": "yarn run lint && react-scripts-ts test --coverage --collectCoverageFrom=src/**/*.ts* --collectCoverageFrom=!src/index.ts --collectCoverageFrom=!src/TestUtils.ts",
     "testonly": "react-scripts-ts test --env=jsdom",
